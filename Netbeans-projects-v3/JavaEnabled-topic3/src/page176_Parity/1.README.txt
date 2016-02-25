@@ -1,0 +1,20 @@
+Parity
+------
+Parity is a simple integrity check mechanism. It can detect single-bit
+errors during data transmission.
+Limitations:
+1. It cannot correct a single-bit error.
+2. A multi-bit error could go undetected.
+   For example, if two bits transpose, ie, a 1 becomes a 0, and a 0 becomes
+   a 1. In this case, the data is corrupted but the number of 1's is still
+   the same.
+Hamming Codes
+This is a technique for correcting single-bit errors, and detecting some
+multi-bit errors.
+
+Hamming.java
+------------
+The class is derived from one of the exam questions.
+Topic 2, Hamming, 05MayP2-Q1
+Hamming is not covered in the syllabus or in the red book.
+Uses a 2D array to correct single-bit errors, and detect multi-bit errors.
