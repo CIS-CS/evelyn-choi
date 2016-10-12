@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Year7ReadingDifficulty;
+package year7readingdifficulty;
+
 import java.util.List;
 
 /**
@@ -11,7 +12,6 @@ import java.util.List;
  * @author evelyc
  */
 public class Text {
-    
     private String text = null;
     private List sentences = null;
     private List totalDiffVocab = null;
@@ -31,7 +31,7 @@ public class Text {
     }
             
     public List listTotalVocab(){
-        
+       return null; 
     }
             
     public int avgCommas(){
@@ -47,4 +47,3 @@ public class Text {
     }
     
 }
-

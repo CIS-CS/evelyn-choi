@@ -3,23 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Year7ReadingDifficulty;
+package year7readingdifficulty;
+
+import java.util.List;
 
 /**
  *
  * @author evelyc
  */
-public class Word {
+public class EasyWords {
     
-    private String word = null;
-    private boolean isDifficult = false;
-    
-    
-    
-    public boolean checkDifficulty(){
-        return false;
+     private List easyWords = null;
+ 
+    public String nextWord(){
+        return null;
     }
-   
-    
-    
 }

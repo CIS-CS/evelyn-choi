@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Year7ReadingDifficulty;
+package year7readingdifficulty;
 
 /**
  *
@@ -17,7 +17,5 @@ public class Year7ReadingDifficulty {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
-    
     
 }

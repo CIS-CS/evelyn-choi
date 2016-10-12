@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Year7ReadingDifficulty;
+package year7readingdifficulty;
+
 import java.util.List;
 
 /**
@@ -12,7 +13,7 @@ import java.util.List;
  */
 public class Sentences {
     
-    private String sentence = null;
+     private String sentence = null;
     private List words = null;
     private int semicolonCount = 0;
     private int commaCount = 0;
