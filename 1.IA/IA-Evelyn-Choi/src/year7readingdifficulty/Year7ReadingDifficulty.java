@@ -207,7 +207,7 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
     } else {
         System.out.println("File access cancelled by user.");
     }
-    DecimalFormat df = new DecimalFormat("00.0");
+    DecimalFormat df = new DecimalFormat("#.#");
     difficultyTextField.setText(text.getDifficulty());
     avgLengthTextField.setText(Double.toString(text.getAvgSentenceLength()));
     avgCommaTextField.setText(df.format(text.getAvgCommasPerSentence()));
