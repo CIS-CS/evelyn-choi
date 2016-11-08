@@ -5,6 +5,12 @@
  */
 package year7readingdifficulty;
 
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.text.DecimalFormat;
+import javax.swing.JFileChooser;
+
 /**
  *
  * @author evelyc
@@ -27,19 +33,78 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        fileChooser = new javax.swing.JFileChooser();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        textArea = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        difficultyTextField = new javax.swing.JTextPane();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        avgLengthTextField = new javax.swing.JTextPane();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        avgSemicolonTextField = new javax.swing.JTextPane();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        avgCommaTextField = new javax.swing.JTextPane();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        avgDiffVocabTextField = new javax.swing.JTextPane();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        diffVocabTextField = new javax.swing.JTextPane();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        File = new javax.swing.JMenu();
+        Open = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        textArea.setColumns(20);
+        textArea.setRows(5);
+        jScrollPane1.setViewportView(textArea);
 
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
+        jScrollPane3.setViewportView(difficultyTextField);
+
+        avgLengthTextField.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                avgLengthTextFieldPropertyChange(evt);
+            }
+        });
+        jScrollPane4.setViewportView(avgLengthTextField);
+
+        jLabel1.setText("Average Sentence Length");
+
+        jLabel4.setText("Average Commas per Sentence");
+
+        jScrollPane6.setViewportView(avgSemicolonTextField);
+
+        jScrollPane7.setViewportView(avgCommaTextField);
+
+        jLabel5.setText("Average Semicolons per Sentence");
+
+        jLabel6.setText("Average Difficult Vocabulary Words Per Sentence");
+
+        jScrollPane8.setViewportView(avgDiffVocabTextField);
+
+        jScrollPane2.setViewportView(diffVocabTextField);
+
+        jLabel2.setText("Difficult Vocabulary Words");
+
+        jLabel7.setText("Difficulty for Year 7 Readers");
+
+        File.setText("File");
+
+        Open.setText("Open");
+        Open.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OpenActionPerformed(evt);
+            }
+        });
+        File.add(Open);
+
+        jMenuBar1.add(File);
 
         setJMenuBar(jMenuBar1);
 
@@ -48,16 +113,113 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 227, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane2)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE))
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel3))
+                    .addComponent(jLabel7))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane4)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane7)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane6)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane8)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addComponent(jLabel2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(318, 318, 318))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void OpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpenActionPerformed
+    Text text = new Text();
+    int returnVal = fileChooser.showOpenDialog(this);
+    if (returnVal == JFileChooser.APPROVE_OPTION) {
+        File file = fileChooser.getSelectedFile();
+        
+        try {
+          // What to do with the file, e.g. display it in a TextArea
+         
+          textArea.read( new FileReader( file.getAbsolutePath() ), null );
+          text.setText(textArea.getText());
+          text.textToSentences();
+          Sentence test = (Sentence)text.getSentences().get(0);
+          System.out.println(test.getSentence());
+          System.out.println(test.getWordsAsStrings());
+          System.out.println(test.getWords());
+          System.out.println(text.getSentences().size());
+          
+        } catch (IOException ex) {
+          System.out.println (ex.toString());
+          System.out.println("problem accessing file"+file.getAbsolutePath());
+        }
+    } else {
+        System.out.println("File access cancelled by user.");
+    }
+    DecimalFormat df = new DecimalFormat("00.0");
+    difficultyTextField.setText(text.getDifficulty());
+    avgLengthTextField.setText(Double.toString(text.getAvgSentenceLength()));
+    avgCommaTextField.setText(df.format(text.getAvgCommasPerSentence()));
+    avgSemicolonTextField.setText(df.format(text.getAvgSemicolonsPerSentence()));
+    avgDiffVocabTextField.setText(Double.toString(text.getAvgDiffVocabPerSentence()));
+    diffVocabTextField.setText(text.getDiffVocab().toString());
+    
+    }//GEN-LAST:event_OpenActionPerformed
+
+    private void avgLengthTextFieldPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_avgLengthTextFieldPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_avgLengthTextFieldPropertyChange
 
     /**
      * @param args the command line arguments
@@ -95,9 +257,30 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu File;
+    private javax.swing.JMenuItem Open;
+    private javax.swing.JTextPane avgCommaTextField;
+    private javax.swing.JTextPane avgDiffVocabTextField;
+    private javax.swing.JTextPane avgLengthTextField;
+    private javax.swing.JTextPane avgSemicolonTextField;
+    private javax.swing.JTextPane diffVocabTextField;
+    private javax.swing.JTextPane difficultyTextField;
+    private javax.swing.JFileChooser fileChooser;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JTextArea textArea;
     // End of variables declaration//GEN-END:variables
 }

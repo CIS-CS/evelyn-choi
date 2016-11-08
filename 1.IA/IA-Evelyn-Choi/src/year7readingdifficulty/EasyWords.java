@@ -5,7 +5,12 @@
  */
 package year7readingdifficulty;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -13,9 +18,16 @@ import java.util.List;
  */
 public class EasyWords {
     
-     private List easyWords = null;
+     private String easyWords = null;
  
-    public String nextWord(){
-        return null;
+    public EasyWords(){
+        
+         
+        
+  
     }
+    
+    
+    
+    
 }
