@@ -762,6 +762,7 @@ locate
 ring
 character
 insect
+regular
 caught
 period
 indicate
@@ -808,12 +809,15 @@ bat
 rather
 crowd
 corn
+satisfy
+satisfied
 compare
 poem
 string
 bell
 depend
 meat
+fetch
 rub
 tube
 famous
@@ -2186,7 +2190,7 @@ your
 yourself
 TRUE
 
-a able aboard about above absent accept accident account ache aching acorn acre across act acts add address admire adventure afar	afraid after afternoon afterward afterwards again against age aged ago agree ah ahead aid aim air airfield airplane airport airship airy	alarm alike alive all alley alligator allow almost alone along aloud already also always am America American among amount an and	angel anger angry animal another answer ant any anybody anyhow anyone anything anyway anywhere apart apartment ape apiece appear apple April	apron are aren't arise arithmetic arm armful army arose around arrange arrive arrived arrow art artist as ash ashes aside ask	asleep at ate attack attend attention August aunt author auto automobile autumn avenue awake awaken away awful awfully awhile ax axe
+a able aboard about above absent accept accident account ache aching acorn acre across act acts add address admire adventures afar	afraid after afternoon afterward afterwards again against age aged ago agree ah ahead aid aim air airfield airplane airport airship airy	alarm alike alive all alley alligator allow almost alone along aloud already also always am America American among amount an and	angel anger angry animal another answer ant any anybody anyhow anyone anything anyway anywhere apart apartment ape appear apple April	apron are aren't arise arithmetic arm armful army arose around arrange arrive arrived arrow art artist as ash ashes aside ask	asleep at ate attack attend attention August aunt author auto automobile autumn avenue awake awaken away awful awfully awhile ax axe
 B
 baa babe babies back background backward backwards bacon bad badge badly bag bake baker bakery baking ball balloon banana band bandage bang banjo bank banker bar barber bare barefoot barely bark barn barrel base baseball basement basket bat batch bath bathe bathing bathroom bathtub	battle battleship bay be beach bead beam bean bear beard beast beat beating beautiful beautify beauty became because become becoming bed bedbug bedroom bedspread bedtime bee beech beef beefsteak beehive been beer beet before beg began beggar begged begin beginning begun behave behind being	believe bell belong below belt bench bend beneath bent berries berry beside besides best bet better between bib bible bicycle bid big bigger bill billboard bin bind bird birth birthday biscuit bit bite biting bitter black blackberry blackbird blackboard blackness blacksmith blame blank blanket	blast blaze bleed bless blessing blew blind blindfold blinds block blood bloom blossom blot blow blue blueberry bluebird blush board boast boat bob bobwhite bodies body boil boiler bold bone bonnet boo book bookcase bookkeeper boom boot born borrow boss both bother bottle bottom	bought bounce bow bowl bow-wow box boxcar boxer boxes boy boyhood bracelet brain brake bran branch brass brave bread break breakfast breast breath breathe breeze brick bride bridge bright brightness bring broad broadcast broke broken brook broom brother brought brown brush bubble bucket buckle	bud buffalo bug buggy build building built bulb bull bullet bum bumblebee bump bun bunch bundle bunny burn burst bury bus bush bushel business busy but butcher butt butter buttercup butterfly buttermilk butterscotch button buttonhole buy buzz by bye
 C
@@ -2220,7 +2224,7 @@ pa pace pack package pad page paid pail pain painful paint painter painting pair
 Q
 quack quart	quarter queen	queer question	quick quickly	quiet quilt	quit quite
 R
-rabbit race rack radio radish rag rail railroad railway rain rainy rainbow raise raisin rake ram ran ranch rang rap rapidly	rat rate rather rattle raw ray reach read reader reading ready real really reap rear reason rebuild receive recess record red	redbird redbreast refuse reindeer rejoice remain remember remind remove rent repair repay repeat report rest return review reward rib ribbon rice	rich rid riddle ride rider riding right rim ring rip ripe rise rising river road roadside roar roast rob robber robe	robin rock rocky rocket rode roll roller roof room rooster root rope rose rosebud rot rotten rough round route row rowboat	royal rub rubbed rubber rubbish rug rule ruler rumble run rung runner running rush rust rusty rye
+rabbit race rack radio radish rag rags rail railroad railway rain rainy rainbow raise raisin rake ram ran ranch rang rap rapidly	rat rate rather rattle raw ray reach read reader reading ready real really reap rear reason rebuild receive recess record red	redbird redbreast refuse reindeer rejoice remain remember remind remove rent repair repay repeat report rest return review reward rib ribbon rice	rich rid riddle ride rider riding right rim ring rip ripe rise rising river road roadside roar roast rob robber robe	robin rock rocky rocket rode roll roller roof room rooster root rope rose rosebud rot rotten rough round route row rowboat	royal rub rubbed rubber rubbish rug rule ruler rumble run rung runner running rush rust rusty rye
 S
 sack sad saddle sadness safe safety said sail sailboat sailor saint salad sale salt same sand sandy sandwich sang sank sap sash sat satin satisfactory Saturday sausage savage save savings saw say scab scales scare scarf school schoolboy schoolhouse schoolmaster schoolroom scorch score scrap scrape scratch scream screen screw scrub sea seal seam search season seat second secret see seeing seed seek seem seen seesaw select self selfish	sell send sense sent sentence separate September servant serve service set setting settle settlement seven seventeen seventh seventy several sew shade shadow shady shake shaker shaking shall shame shan't shape share sharp shave she she'd she'll she's shear shears shed sheep sheet shelf shell shepherd shine shining shiny ship shirt shock shoe shoemaker shone shook shoot shop shopping shore short shot should shoulder shouldn't shout shovel show shower	shut shy sick sickness side sidewalk sideways sigh sight sign silence silent silk sill silly silver simple sin since sing singer single sink sip sir sis sissy sister sit sitting six sixteen sixth sixty size skate skater ski skin skip skirt sky slam slap slate slave sled sleep sleepy sleeve sleigh slept slice slid slide sling slip slipped slipper slippery slit slow slowly sly smack small smart smell	smile smoke smooth snail snake snap snapping sneeze snow snowy snowball snowflake snuff snug so soak soap sob socks sod soda sofa soft soil sold soldier sole some somebody somehow someone something sometime sometimes somewhere son song soon sore sorrow sorry sort soul sound soup sour south southern space spade spank sparrow speak speaker spear speech speed spell spelling spend spent spider spike spill spin spinach spirit spit	splash spoil spoke spook spoon sport spot spread spring springtime sprinkle square squash squeak squeeze squirrel stable stack stage stair stall stamp stand star stare start starve state station stay steak steal steam steamboat steamer steel steep steeple steer stem step stepping stick sticky stiff still stillness sting stir stitch stock stocking stole stone stood stool stoop stop stopped stopping store stork stories storm stormy story stove straight	strange stranger strap straw strawberry stream street stretch string strip stripes strong stuck study stuff stump stung subject such suck sudden suffer sugar suit sum summer sun Sunday sunflower sung sunk sunlight sunny sunrise sunset sunshine supper suppose sure surely surface surprise swallow swam swamp swan swat swear sweat sweater sweep sweet sweetness sweetheart swell swept swift swim swimming swing switch sword swore
 T
@@ -2230,7 +2234,7 @@ ugly umbrella uncle under understand underwear	undress unfair unfinished unfold 
 V
 valentine valley valuable	value vase vegetable	velvet very vessel	victory view village	vine violet visit	visitor voice vote
 W
-wag wagon waist wait wake waken walk wall walnut want war warm warn was wash washer washtub wasn't waste watch watchman water watermelon waterproof wave wax	way wayside we weak weakness weaken wealth weapon wear weary weather weave web we'd wedding Wednesday wee weed week we'll weep weigh welcome well went were	we're west western wet we've whale what what's wheat wheel when whenever where which while whip whipped whirl whisky whiskey whisper whistle white who who'd whole	who'll whom who's whose why wicked wide wife wiggle wild wildcat will willing willow win wind windy windmill window wine wing wink winner winter wipe wire	wise wish wit witch with without woke wolf woman women won wonder wonderful won't wood wooden woodpecker woods wool woolen word wore work worker workman world	worm worn worry worse worst worth would wouldn't wound wove wrap wrapped wreck wren wring write writing written wrong wrote wrung
+wag wagon waist wait wake waken walk wall walnut want war warm warn was wash washer washtub wasn't waste watch watchman water watermelon waterproof wave wax	way wayside we weak weakness weaken wealth weapon wear weary weather weave web we'd wedding Wednesday wee weed week we'll weep weigh welcome well went were	we're west western wet we've whale what what's wheat wheel when whenever where which while whip whipped whirl whisky whiskey whisper whistle white who who'd whole	who'll whom who's whose why wicked wide wife wiggle wild wildcat will willing willow win wind winds windy windmill window wine wing wink winner winter wipe wire	wise wish wit witch with without woke wolf woman women won wonder wonderful won't wood wooden woodpecker woods wool woolen word wore work worker workman world	worm worn worry worse worst worth would wouldn't wound wove wrap wrapped wreck wren wring write writing written wrong wrote wrung
 X - Y
 yard yarn year yell	yellow yes yesterday yet	yolk yonder you you'd	you'll young youngster your	yours you're yourself yourselves	youth you've
 

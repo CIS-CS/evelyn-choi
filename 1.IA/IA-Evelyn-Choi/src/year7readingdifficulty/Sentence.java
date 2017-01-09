@@ -68,7 +68,6 @@ public class Sentence {
             char c = sentence.charAt(i);    
             if (c == ';'){
                 semicolonCount++;
-                System.out.println("i found a semicolon");
             }
         }
     }
@@ -90,11 +89,12 @@ public class Sentence {
         return commaCount;
     }
     
-    public void listDiffVocab(){
+    public void listDiffVocab() throws FileNotFoundException{
         // go through each word
         for(int i = 0; i<words.size(); i++){
             //
             Word currWord = (Word)words.get(i);
+            
             if (currWord.getDifficulty() == true){
                 diffVocab.add(currWord);  
             }

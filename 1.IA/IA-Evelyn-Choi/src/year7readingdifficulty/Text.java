@@ -24,14 +24,9 @@ public class Text {
     private double avgSentenceLength = 0;
     private double avgSemicolonsPerSentence = 0;
     private double avgCommasPerSentence = 0;
-    private String difficulty = null;
-    private double difficultyRatio = 0;
+
     
-    private final int sevenVocabCount = 1;
-    private final int sevenSentenceLength = 20;
-    private final double sevenSemicolonCount = 0.1;
-    private final double sevenCommaCount = 1.5;
-    
+
     
     public Text(){
         
@@ -59,11 +54,7 @@ public class Text {
     public List getSentences(){
         return sentences;
     }
-    
-            
-    public int avgCommas(){
-        return 0;
-    }
+ 
             
   
     
@@ -76,45 +67,7 @@ public class Text {
         text = newText;
     }
     
-    
-    
-    public String findDifficulty(){
-        double commaDifficulty = avgCommasPerSentence/sevenCommaCount;
-        double semicolonDifficulty = avgSemicolonsPerSentence/sevenSemicolonCount;
-        double lengthDifficulty = avgSentenceLength/sevenSentenceLength;
-        double vocabDifficulty = avgDiffVocabPerSentence/sevenVocabCount;
-        difficultyRatio = (commaDifficulty + semicolonDifficulty + lengthDifficulty + vocabDifficulty)/4;
-        if (difficultyRatio <=0.75){
-            difficulty = "Easy";
-        }
-        else if(difficultyRatio <= 1.5){
-            difficulty = "Suitable";
-        }
-        else if(difficultyRatio <= 2.5){
-            difficulty = "Challenging";
-        }
-        else {
-            difficulty = "Very Challenging";
-        }
-            
-        return difficulty; 
-    }
-    
-    public String getDifficulty(){
-        return difficulty;
-    }
-    
-    /*public void setDifficulty(String diff){
-        difficulty = diff;
-    }*/
-    
-    public double getDifficultyRatio(){
-        return difficultyRatio;
-    }
-    
-    
-    
-    
+
     public void setSentences(List newSentences){
         sentences = newSentences;
     }
@@ -134,7 +87,7 @@ public class Text {
             
         }
         //get avg
-        avgSentenceLength = totalLength / sentences.size();
+        avgSentenceLength = (double)totalLength / sentences.size();
         return avgSentenceLength;
     }
     
@@ -154,26 +107,29 @@ public class Text {
             Sentence currSentence = (Sentence)sentences.get(i);
             commas += currSentence.getCommaCount();
         } 
-        System.out.println(commas);
+
      
         avgCommasPerSentence = (double)commas/sentences.size();
-        System.out.println(avgCommasPerSentence);
+
         return avgCommasPerSentence;
     }
     
     
     public List listTotalDiffVocab(){
         //loop through each sentence
+        System.out.println("HI I'M LISTING VOCAB NOW");
         for(int i = 0; i<sentences.size(); i++){
             Sentence currSentence = (Sentence)sentences.get(i);
+            
             List currDiffVocabList = currSentence.getDiffVocab();
+           // System.out.println(currDiffVocabList);
             //loop through the difficult word list in the sentence
-            for (int a = 0; currDiffVocabList.get(a)!= null; a++){
+            for (int a = 0; a<currDiffVocabList.size(); a++){
                 Word currDiffWord = (Word)currDiffVocabList.get(a);
                 String currDiffWordString = currDiffWord.getWord();
                 boolean wordAlreadyInList = false;
                 //check if difficult word is already in the difficult word list of the text
-                for(int loop = 0; totalDiffVocab.get(loop) != null; loop++){
+                for(int loop = 0; loop<totalDiffVocab.size(); loop++){
                     String existingDiffWord = (String)totalDiffVocab.get(loop); 
                     if (currDiffWordString.equals(existingDiffWord)){
                         wordAlreadyInList = true;
@@ -185,21 +141,21 @@ public class Text {
                 }
             }
         }
+    
         return totalDiffVocab;
     } 
     
     
     public double getAvgDiffVocabPerSentence(){
-        avgDiffVocabPerSentence = totalDiffVocab.size()/sentences.size();
+        avgDiffVocabPerSentence = (double)totalDiffVocab.size()/sentences.size();
         return avgDiffVocabPerSentence;
+        
     }
     
     public List getDiffVocab(){
         
         return totalDiffVocab;
     }
-
-    
       
     
 }

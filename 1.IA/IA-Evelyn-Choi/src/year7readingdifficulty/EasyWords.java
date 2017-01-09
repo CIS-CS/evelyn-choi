@@ -7,10 +7,9 @@ package year7readingdifficulty;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.List;
+import java.net.URL;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -18,13 +17,16 @@ import java.util.logging.Logger;
  */
 public class EasyWords {
     
-     private String easyWords = null;
- 
-    public EasyWords(){
-        
-         
-        
-  
+    private String easyWords = null;
+     
+    public EasyWords() throws FileNotFoundException{
+
+        URL url = getClass().getResource("easywords.txt");
+        easyWords = new Scanner(new File(url.getPath())).useDelimiter("\\A").next();
+    }
+    
+    public String getEasyWords(){
+        return easyWords;
     }
     
     

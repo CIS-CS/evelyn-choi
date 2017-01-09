@@ -8,9 +8,6 @@ import java.util.Scanner;
 import java.io.File; 
 import java.io.FileNotFoundException;
 import java.net.URL;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 
 /**
  *
@@ -19,18 +16,26 @@ import java.util.logging.Logger;
 public class Word {
  
     private String word = null;
+    private String checkWord = null;
     private boolean isDifficult = false;
-    private String allEasyWords = null;
+
     
     public Word() throws FileNotFoundException{
-       URL url = getClass().getResource("easywords.txt");
-       allEasyWords = new Scanner(new File(url.getPath())).useDelimiter("\\A").next();
+
     }
-    
-   
-    
-    public boolean getDifficulty(){
-        isDifficult = !(allEasyWords.contains(word));
+     
+    public boolean getDifficulty() throws FileNotFoundException{
+        EasyWords easyWords = new EasyWords();
+        word = word.toLowerCase();
+       if(word.length()>4){
+            checkWord = word.substring(0, word.length() - 3);
+           
+            if(!easyWords.getEasyWords().contains(checkWord)){
+                isDifficult = true;
+            }
+        }
+        
+        
         return isDifficult;
     }
     
