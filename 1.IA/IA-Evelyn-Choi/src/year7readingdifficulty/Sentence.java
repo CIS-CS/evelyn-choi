@@ -64,7 +64,9 @@ public class Sentence {
     }
     
     public void countSemicolons(){
+        // loop through each character in sentence 
         for (int i = 0; i < sentence.length(); i++){
+            // identify if character is semicolon
             char c = sentence.charAt(i);    
             if (c == ';'){
                 semicolonCount++;
@@ -77,6 +79,7 @@ public class Sentence {
     }
     
     public void countCommas(){
+        // loop through each character in sentence 
         for (int i = 0; i < sentence.length(); i++){
             char c = sentence.charAt(i);    
             if (c == ','){
@@ -92,9 +95,8 @@ public class Sentence {
     public void listDiffVocab() throws FileNotFoundException{
         // go through each word
         for(int i = 0; i<words.size(); i++){
-            //
+            // check if word retrieved has difficulty as true
             Word currWord = (Word)words.get(i);
-            
             if (currWord.getDifficulty() == true){
                 diffVocab.add(currWord);  
             }

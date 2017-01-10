@@ -13,6 +13,8 @@ import java.text.DecimalFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
+import javax.swing.filechooser.*;
+import javax.swing.BorderFactory;
 
 /**
  *
@@ -41,6 +43,11 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
         jPopupMenu1 = new javax.swing.JPopupMenu();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        jDialog1 = new javax.swing.JDialog();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jTextPane2 = new javax.swing.JTextPane();
+        jButton3 = new javax.swing.JButton();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -72,6 +79,7 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         File = new javax.swing.JMenu();
         Open = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -96,6 +104,47 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
         );
 
         jButton1.setText("jButton1");
+
+        jDialog1.setMinimumSize(new java.awt.Dimension(500, 200));
+
+        jTextPane2.setBackground(new java.awt.Color(238, 238, 238));
+        jTextPane2.setBorder(null);
+        jTextPane2.setCaretColor(new java.awt.Color(238, 238, 238));
+        jTextPane2.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jScrollPane9.setViewportView(jTextPane2);
+
+        jButton3.setText("OK");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog1Layout.createSequentialGroup()
+                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialog1Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE))
+                    .addGroup(jDialog1Layout.createSequentialGroup()
+                        .addGap(174, 174, 174)
+                        .addComponent(jButton3)))
+                .addGap(39, 39, 39))
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3)
+                .addGap(21, 21, 21))
+        );
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -315,6 +364,8 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jMenuBar1.setBorder(null);
+
         File.setText("File");
 
         Open.setText("Open");
@@ -326,6 +377,19 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
         File.add(Open);
 
         jMenuBar1.add(File);
+
+        jMenu2.setText("Help");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
+        jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
 
@@ -355,7 +419,7 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(290, 290, 290)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 273, Short.MAX_VALUE)
                         .addGap(29, 29, 29))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -375,6 +439,8 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
     private void OpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpenActionPerformed
     Text text = new Text();
     DifficultyCalculator difficultyCalculator = new DifficultyCalculator(text);
+    FileNameExtensionFilter filter = new FileNameExtensionFilter("TEXT FILES", "txt", "text");
+    fileChooser.setFileFilter(filter);
     int returnVal = fileChooser.showOpenDialog(this);
     if (returnVal != JFileChooser.APPROVE_OPTION) {
         System.out.println("File access cancelled by user.");
@@ -385,6 +451,7 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
             // What to do with the file, e.g. display it in a TextArea
             
             textArea.read( new FileReader( file.getAbsolutePath() ), null );
+            
             text.setText(textArea.getText());
             text.textToSentences();
             Sentence test = (Sentence)text.getSentences().get(0);
@@ -437,6 +504,24 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+        jDialog1.setVisible (true);
+        jTextPane2.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        jTextPane2.setText("Click 'File' and then 'Open' to open a .txt file"
+                + " of your choice, or paste your desired text directly into"
+                + " the text area on the right and click 'Calculate!'. The analysis of your "
+                + "text will be shown on the right.");
+        
+    }//GEN-LAST:event_jMenu2MouseClicked
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        
+    }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        jDialog1.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -484,6 +569,8 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
     private javax.swing.JFileChooser fileChooser;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -493,7 +580,9 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -508,6 +597,8 @@ public class Year7ReadingDifficulty extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JTextPane jTextPane2;
     private javax.swing.JTextArea textArea;
     // End of variables declaration//GEN-END:variables
 }

@@ -38,8 +38,12 @@ public class Text {
     }
     
     public void textToSentences() throws FileNotFoundException{
+       /**
+        * http://stackoverflow.com/questions/2687012/split-string-into-sentences for delimiter
+        * splits text into strings (not the Sentence objects) based on delimiter
+        */ 
        sentencesAsStrings = new ArrayList<>(Arrays.asList(text.split("(?<=[a-z])\\.\\s+")));   
-       //http://stackoverflow.com/questions/2687012/split-string-into-sentences
+       
        for (int i = 0; i<sentencesAsStrings.size(); i++){
            Sentence sentence = new Sentence(sentencesAsStrings.get(i).toString());
            
@@ -117,12 +121,10 @@ public class Text {
     
     public List listTotalDiffVocab(){
         //loop through each sentence
-        System.out.println("HI I'M LISTING VOCAB NOW");
         for(int i = 0; i<sentences.size(); i++){
             Sentence currSentence = (Sentence)sentences.get(i);
             
             List currDiffVocabList = currSentence.getDiffVocab();
-           // System.out.println(currDiffVocabList);
             //loop through the difficult word list in the sentence
             for (int a = 0; a<currDiffVocabList.size(); a++){
                 Word currDiffWord = (Word)currDiffVocabList.get(a);
